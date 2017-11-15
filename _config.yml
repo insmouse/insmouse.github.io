@@ -22,6 +22,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kimkardashian
 github_username:  insmouse
 
+url: http://localhost:4000
+
 #include:
 #  - _sass
 
