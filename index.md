@@ -5,9 +5,7 @@
 layout: home
 ---
 
----
-#layout: default
----
+
 
 DETTA ÄR PROVTEXT I INDEX.MD
 

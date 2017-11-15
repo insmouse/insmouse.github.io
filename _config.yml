@@ -22,12 +22,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kimkardashian
 github_username:  insmouse
 
-include:
-  - _sass
+#include:
+#  - _sass
 
 # Build settings
 markdown: kramdown
-#theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 

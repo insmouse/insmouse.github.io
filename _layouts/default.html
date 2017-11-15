@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<!--APA detta dyker upp HÖGST UPP på sajten, på en hylla över allt annat, föga elegant!-->
+APA från DEFAULT.HTML: detta dyker upp HÖGST UPP på sajten, på en hylla över allt annat, föga elegant!
 
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--detta var ej bortkommenterat från början:-->
+<!--<link rel="stylesheet" type="text/css" href="../../../../../assets/main.css">-->
 
   {% include head.html %}
 
@@ -16,6 +17,7 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
+        DETTA ÄR DEFAULT.HTML:s MAIN
         {{ content }}
       </div>
     </main>
