@@ -47,7 +47,7 @@ $on-laptop:        800px !default;
 
 // Import partials.
 @import
-"minima/base",
+"minima/base", // här importeras alltså de partials som ligger i minima-katalogen
 "minima/layout",
 "minima/syntax-highlighting"
 ;
