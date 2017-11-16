@@ -5,6 +5,7 @@ test_text: TESTTEXT (variabel) I BLOG_POSTS
 title:  "Blogginlägg"
 date:   2017-11-07 09:13:06 -0600
 categories: jekyll update
+permalink: /blog/
 fruit:
   - äpple
   - kaviar
@@ -21,7 +22,6 @@ merfrukt:
     color: orange
 ---
 
-{% include disqus_comments.html %}
 
 
 <section>

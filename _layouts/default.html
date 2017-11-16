@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-APA från DEFAULT.HTML: detta dyker upp HÖGST UPP på sajten, på en hylla över allt annat, föga elegant!
+<!--APA från DEFAULT.HTML: detta dyker upp HÖGST UPP på sajten, på en hylla över allt annat, föga elegant!-->
 
 <!--detta var ej bortkommenterat från början:-->
 <!--<link rel="stylesheet" type="text/css" href="../../../../../assets/main.css">-->
@@ -24,8 +24,13 @@ APA från DEFAULT.HTML: detta dyker upp HÖGST UPP på sajten, på en hylla öve
       </div>
     </main>
 
-    {% include footer.html %}
+  {% if page.about != true %}
 
+  {% include about_box.html %}
+
+  {% endif %}
+
+    {% include footer.html %}
 
   </body>
 

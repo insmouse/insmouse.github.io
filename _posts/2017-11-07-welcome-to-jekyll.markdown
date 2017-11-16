@@ -3,6 +3,7 @@ layout: post
 title:  "Välkommen till min testsida!"
 date:   2017-11-07 09:13:06 -0600
 categories: jekyll update
+comments: true
 ---
 
 Här testar jag att skriva lite text. Hej!
