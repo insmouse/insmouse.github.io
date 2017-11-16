@@ -1,0 +1,10 @@
+/* TEAM */
+Alfred Holmgren
+E-mail: ah223ws [at] student.lnu.se
+Github: insmouse
+Location: Tokyo, Japan
+
+/* SITE */
+Last update: 2017/11/20
+Software: Jekyll, Sass, Docker, Webstorm
+Language: Swedish
