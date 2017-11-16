@@ -163,6 +163,13 @@ pre {
  * Wrapper
  */
 .wrapper {
+
+  //box-shadow: 10px 10px black;
+  //background-color: yellow;
+  //margin-bottom: 0;
+  //margin-top: 10px;
+  //padding: 30px;
+
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;

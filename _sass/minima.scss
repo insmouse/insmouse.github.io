@@ -21,14 +21,15 @@ $spacing-unit:     20px !default;
 //}
 
 // $ = variabler
-$text-color:       red !default;
+$text-color:       #f84aa3 !default;
 $background-color: white !default;
 //{ @include linearGradient(black, white); };
-$brand-color:      green !default;
+$brand-color:      #4fcdf5 !default;
 
 $grey-color:       #828280 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-ultralight: #f6f6f6;
+$grey-color-dark:  darken($grey-color, 40%) !default;
 
 // Width of the content area
 $content-width:    800px !default;

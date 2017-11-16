@@ -2,12 +2,32 @@
  * Site header
  */
 .site-header {
-  //background-image: url(../img/apa.jpg);
-  background-color: $grey-color-light;
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 5px solid $grey-color-dark;
-  height: 150px;
-  //min-height: $spacing-unit * 1.865;
+  border-radius: 15px;
+  box-shadow: 10px 10px black;
+  //background-color: yellow;
+  background-color: $grey-color-ultralight;
+  //margin-bottom: 0;
+  margin-top: 10px;
+  //max-width: 100%;
+  //padding: 30px;
+  //border: 5px solid white;
+  //
+  //img {
+  //  max-width: 20%;
+  //  padding-right: 5px;
+  //  padding-top: 5px;
+  //  float: left;
+  //}
+
+
+  //background-image: url(../img/bakgrund.jpg);
+  //background-size: cover;
+  //background-color: $grey-color-dark;
+  //border-top: 5px solid $grey-color-dark;
+  //border-bottom: 5px solid black;
+  height: 100px;
+  //min-height: $spacing-unit * 1.865;'
+  padding: $spacing-unit * 1.5;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -109,9 +129,9 @@
  * Site footer
  */
 .site-footer {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 5px solid $grey-color-dark;
-  background-color: $grey-color-light;
+  //border-top: 5px solid $grey-color-dark;
+  //border-bottom: 5px solid $grey-color-dark;
+  //background-color: $grey-color-light;
   padding: $spacing-unit;
 }
 
@@ -259,15 +279,33 @@
   }
 }
 
+.content-box {
+  border-radius: 15px;
+  box-shadow: 10px 10px black;
+  padding: 20px;
+  background-color: $grey-color-ultralight;
+}
 
 .aboutbox {
+  @extend .content-box;
   //@include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
-  margin-bottom: 0;
+  //font-weight: 300;
+  //line-height: $base-line-height * $base-font-size * 2.25;
+  //letter-spacing: -1px;
+  //border-radius: 15px;
+  //box-shadow: 10px 10px black;
+  font-style: italic;
+  background-color: yellow;
+  //margin-bottom: 0;
+  //max-width: 100%;
+  //padding: 20px;
+  //border: 5px solid white;
 
-  padding: 20px;
-  //float: center;
-  //float: left;
+  img {
+    max-width: 20%;
+    padding-right: 5px;
+    padding-top: 5px;
+    float: left;
+  }
+
 }
