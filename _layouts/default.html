@@ -24,13 +24,44 @@
         {{ content }}
       </div>
       </div>
-    </main>
+    <!--</main>-->
+
+
+
+  <!--<main class="page-content" aria-label="Content">-->
+  <!--<div class="wrapper">-->
+    <!--<div class="aboutbox">-->
+      <!--<p>Om mig</p>-->
+
+      <!--ABOUT_BOX SOM ICKE-INCLUDE-->
+
+      <!--<p>-->
+        <!--<img src = "/img/apa.jpg" width="50" alt="En bild på mig">-->
+      <!--</p>-->
+
+
+      <!--<p>-->
+
+        <!--Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig.-->
+        <!--Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig.-->
+        <!--Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. Lite info om mig. All work and no play-->
+
+      <!--</p>-->
+
+
+      <!--<p>-->
+        <!--<a href="/about/">Läs hela min presentation</a>-->
+      <!--</p>-->
+
+    <!--</div>-->
+  <!--</div>-->
+  <!--</main>-->
+
 
   {% if page.about != true %}
-
-  {% include about_box.md %}
-
+  {% include about_box.html %}
   {% endif %}
+
 
     {% include footer.html %}
 

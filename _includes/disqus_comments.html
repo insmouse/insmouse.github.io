@@ -1,27 +1,21 @@
-<!--{% if page.comments != false and jekyll.environment == "production" %}-->
-
-
-
-### DETTA ÄR COMMENTS-INCLUDEN
+{% if page.comments != false and jekyll.environment == "production" %}
+<!--(det ovan var bortkommenterat förut, funkade ändå)-->
 
 <!--In between a {% if page.comments %} and a {% endif %} tag, copy and paste the Universal Embed Code-->
 <!--in the appropriate template where you'd like Disqus to load.-->
-
 <!--{% if page.comments %}-->
 
 <div id="disqus_thread"></div>
-<script>
 
+<script>
   /**
    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-   var disqus_config = function () {
-   this.page.url = '{{ page.url | absolute_url }}';  // Replace PAGE_URL with your page's canonical URL variable
-   this.page.identifier = '{{ page.url | absolute_url }}';
-   };
-
-/*
+  var disqus_config = function () {
+    this.page.url = '{{ page.url | absolute_url }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ page.url | absolute_url }}';
+  };
+  /*
    PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
    */
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -36,10 +30,7 @@
 <!--räknaren:-->
 <script id="dsq-count-scr" src="//ah-1dv022.disqus.com/count.js" async></script>
 
-<!--testar räknaren:-->
-<!--<a href="{{ page.url }}#disqus_thread"># of comments</a>-->
+{% endif %}
+{% endif %}
 
-HÄR SLUTAR COMMENTS.HTML
-
-<!--{% endif %}-->
-<!--{% endif %}-->
+<!--COMMENTS-->
