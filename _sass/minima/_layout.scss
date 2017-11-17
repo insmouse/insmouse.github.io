@@ -294,19 +294,31 @@
   //letter-spacing: -1px;
   //border-radius: 15px;
   //box-shadow: 10px 10px black;
-  font-style: italic;
+  //font-style: italic;
   background-color: yellow;
-  margin-top:20px;
+  //margin-top:1px;
   //margin-bottom: 0;
   //max-width: 100%;
   //padding: 20px;
   //border: 5px solid white;
 
   img {
-    max-width: 20%;
-    padding-right: 5px;
-    padding-top: 5px;
+    max-width: 83px;
+    padding-right: 8px;
+    padding-top: 4px;
     float: left;
   }
 
+  .page-heading {
+    @include relative-font-size(2);
+    font-weight: bolder;
+    //background-color: green;
+  }
+
+  .info-text {
+    font-style: italic;
+  }
+
+
 }
+

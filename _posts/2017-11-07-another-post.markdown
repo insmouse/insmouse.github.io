@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Välkommen till min testsida!"
+title:  "Ett till inlägg"
 date:   2017-11-07 09:13:06 -0600
 categories: jekyll update
 comments: true
