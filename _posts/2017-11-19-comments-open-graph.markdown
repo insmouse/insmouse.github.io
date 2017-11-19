@@ -1,12 +1,17 @@
 ---
 layout: post
-title:  "Ett till inlägg"
+title:  "Kommentarer och Open Graph"
 date:   2017-11-07 09:13:06 -0600
-categories: jekyll update
+categories: examination-1
 comments: true
 ---
 
-Här testar jag att skriva lite text. Hej!
+### How did you implements comments to blog posts
+
+### What is Open Graph and how do you make use of it?
+
+<!--more-->
+
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

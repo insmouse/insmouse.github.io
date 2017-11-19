@@ -1,20 +1,10 @@
 @charset "utf-8";
 
-// Det går att ta bort ALLT i detta dokument och bara skriva
-//body { background: red; }
-
-//h1 {
-//  //size: 300px;
-//  color: #f27e61;
-//}
-
 
 // Define defaults for each variable.
 
 $base-font-family: "Courier", monospace !default;
-$headline-font-family: Bevan;
-//$tempfont: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$second-base-font-family: Courier;
+$headline-font-family: "Bevan", "Bodoni", serif !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -22,20 +12,12 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     20px !default;
 
-//@mixin linearGradient($start, $finish) {
-//background-image(linear-gradient($start, $finish));
-//}
 
-// $ = variabler
 $headline-color: #f27e61 !default;
 $text-color:       black !default;
-//f84aa3
 $background-color: #f27e61 !default;
-//{ @include linearGradient(black, white); };
 $brand-color:      #76cbd9 !default;
 $brand-color-dark: #13383e !default;
-// #4fcdf5
-// #fdc66b
 
 $grey-color:       #828280 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -67,7 +49,7 @@ $on-laptop:        800px !default;
 
 // Import partials.
 @import
-"minima/base", // här importeras alltså de partials som ligger i minima-katalogen
+"minima/base",
 "minima/layout",
 "minima/syntax-highlighting"
 ;
