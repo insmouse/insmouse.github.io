@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Robots.txt och humans.txt"
-date:   2017-11-07 09:13:06 -0600
+date:   2017-11-18 09:13:06 -0600
 categories: examination-1
 comments: true
 ---
@@ -14,8 +14,9 @@ Robots.txt är en textfil som ger instruktioner till robotar/sökmotorer om hur 
 
 Så här ser min robots.txt-fil ut:
 
-User-agent: *
-Disallow: /
+_User-agent: *_
+
+_Disallow: /_
 
 "User-agent: *" betyder "alla robotar", och "Disallow: /" att hela sajten exkluderas. Detta innebär att alla sökmotorer i teorin förhindras från att (eller snarare ombeds att inte) gå igenom innehållet. Jag valde att stänga ute sökmotorer på detta vis eftersom det här är en sajt med övningsuppgifter och liknande som jag inte vill skylta med utanför denna kurs.
 
