@@ -6,29 +6,19 @@ categories: examination-1
 comments: true
 ---
 
-### How did you implements comments to blog posts
-
-### What is Open Graph and how do you make use of it?
+### Hur implementerade du kommentarer i dina blogginlägg?
 
 <!--more-->
 
+Jag använde mig av tredjepartslösningen Disqus. För att ordna Disqus-stödet på min sajt skapade jag ett konto samt följde installationsguiden för Jekyll på disqus.com. I de inlägg som ska ha kommentarer har jag angett "comments: true" i front matter. I koden för layouten post.html finns "{% if page.comments %} (...) {% endif %}", som gör att kommentarer bara laddas på sidor som har "comments: true" i sin front matter.
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+### Vad är Open Graph och hur använder du det?
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Open Graph är en standard som gör att sociala medie-plattformar som Facebook kan förhandsvisa en sidas innehåll på ett sätt som sidans ägare själv kan skräddarsy. Med hjälp av en uppsättning taggar i den aktuella sidans head kan man skicka med ett valfritt antal egenskaper till den plattform där sidan delas.
 
-Jekyll also offers powerful support for code snippets:
+Genom att använda koden nedan har jag valt att skicka med den aktuella sidans titel, typen av innehåll (webbplats), URL samt – eftersom dessa inlägg inte behöver några egna bilder – min profilbild.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{% capture url_path %}{{site.url}}{{page.url}}{% endcapture %}" />
+  <meta property="og:image" content="/img/avatar.jpg" />

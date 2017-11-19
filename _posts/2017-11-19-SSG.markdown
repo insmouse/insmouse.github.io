@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Static site generators"
-date:   2017-11-07 09:13:06 -0600
+date:   2017-11-19 23:20:00 -0600
 categories: examination-1
 comments: true
 ---
@@ -11,22 +11,10 @@ comments: true
 
 <!--more-->
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Static site generators används för att göra just statiska sajter, som inte uppdateras i realtid med dynamiskt innehåll. (Det går dock att använda tredjepartstjänster som Disqus för att inkludera visst dynamiskt innehåll.) Enkelt uttryckt kan användaren inte göra mer än att surfa runt på sajten, och hen får ingen "feedback" i form av exempelvis dynamiska rekommenderade artiklar under tiden.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Jag tycker det var en utmaning att komma igång med Jekyll, eftersom det kräver att man lär sig en del ny syntax, samt sätter sig in i filstrukturen, som skiljer sig en del från den färdiga sajtens. För att komma igång med en enkel sajt krävs det mycket mer tålamod än om man använder exempelvis Wordpress, med dess grafiska gränssnitt. Att redigera designen är mer komplicerat än att välja ett Wordpress-tema.
 
-Jekyll also offers powerful support for code snippets:
+Fördelar med SSG:s är att statiska sajter blir snabba och trygga, då de inte kräver några databaser eller uppdateringar. Även om det kan vara svårt att komma igång är det också väldigt smidigt att använda includes och layout-mallar för att exempelvis applicera samma header och footer på flera olika sidor, utan att man behöver upprepa en massa kod. Att SSG:s konverterar Markdown till HTML gör det också enkelt att skapa och redigera nya sidor på sajten utan att skriva en enda rad kod.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+SSG:s lämpar sig inte för sidor som behöver uppdateras i realtid, eller som kräver input från användaren i form av inloggning eller annat.

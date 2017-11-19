@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Förkompilering av CSS"
+date:   2017-11-19 23:50:00 -0600
+categories: examination-1
+comments: true
+---
+
+### Vad tycker du om att förkompilera CSS? Jämför med vanlig CSS. Vilka tekniker använde du dig av? Fördelar och nackdelar?
+
+<!--more-->
+
+I princip tycker jag att förkompilerad CSS är en tilltalande idé. Bland fördelarna finns möjligheten att använda variabler och funktioner, samt jobba med flera moduler – varpå allt automatiskt översätts och bakas ihop till en enda klassisk CSS-fil. Att kunna ange färger, textstorlekar och liknande som variabler i en separat fil, för att sedan utnyttja dem i en annan, är förstås mer överskådligt än att behöva ange exempelvis "'Helvetica Neue', 'Helvetica', sans-serif" på hundra olika ställen i en vanlig CSS-fil. Ändrar jag typsnittsvariabeln ändras också alla förekomster av typsnittet. Även "@extend" hade jag stor nytta av när jag ville att de olika modulerna på min sajt skulle "ärva" stilar av varandra (exempelvis de rundade rutornas skuggor).
+
+Förkompilerad CSS har många likheter med hur man arbetar med en SSG. På samma sätt som jag många gånger irrade bort mig i Jekylls filstruktur för min sajt, ägnade jag åtskilliga timmar åt att försöka lista ut vilka Sass-taggar som krockade och gjorde att ett visst designelement inte såg ut som jag hade tänkt mig. En del syntax var också lite bökig att komma igång med, särskilt eftersom jag inte var helt på det klara med skillnaden mellan SCSS, Sass och Less när jag googlade mina problem i början. Som nybörjare har detta gjort att jag gått ganska försiktigt fram, eftersom jag varit orolig för att "ha sönder" saker och ting. När man arbetar med moduler måste man också resonera på en makrovivå som kan vara svår att vänja sig vid. I efterhand känns det här som något jag borde ha fokuserat på mer redan från början, men nu har jag åtminstone lärt mig det inför framtiden.
+
+Jag är mer van vid att jobba med vanlig CSS sedan kursen i webbteknik, men i det långa loppet är det tydligt att exempelvis Sass (som jag använt på min sajt) kan göra ett projekt mer lättöverskådligt och skalbart – även om det kräver en viss tidsinvestering.
