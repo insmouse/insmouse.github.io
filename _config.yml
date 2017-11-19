@@ -16,13 +16,13 @@
 title: Alfreds 1DV022-sajt
 email: ah223ws@student.lnu.se
 description: >- # this means to ignore newlines until "baseurl:"
-  Här kommer man hitta länkar till mina uppgifter i 1DV022 och eventuellt senare kurser.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kimkardashian
+  Detta är Alfreds 1DV022-sajt. Här kommer man hitta länkar till mina uppgifter i 1DV022 och eventuellt senare kurser.
+#baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://insmouse.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: insmouse
 github_username:  insmouse
 
-url: http://localhost:4000
+#http://localhost:4000
 
 #include:
 #  - _sass

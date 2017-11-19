@@ -3,12 +3,17 @@
 // Det går att ta bort ALLT i detta dokument och bara skriva
 //body { background: red; }
 
-
+//h1 {
+//  size: 300px;
+//  color: black;
+//}
 
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: Yanone Kaffeesatz;
+$tempfont: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$second-base-font-family: Courier;
 $base-font-size:   15px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -21,10 +26,13 @@ $spacing-unit:     20px !default;
 //}
 
 // $ = variabler
-$text-color:       #f84aa3 !default;
-$background-color: white !default;
+$headline-color: #f27e61 !default;
+$text-color:       black !default;
+//f84aa3
+$background-color: #fdc66b !default;
 //{ @include linearGradient(black, white); };
-$brand-color:      #4fcdf5 !default;
+$brand-color:      #76cbd9 !default;
+// #4fcdf5
 
 $grey-color:       #828280 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
