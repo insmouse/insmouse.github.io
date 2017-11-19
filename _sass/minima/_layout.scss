@@ -2,12 +2,15 @@
  * Site header
  */
 .site-header {
+  font-family: $headline-font-family; // Detta styr typsnittet i menyn, ej loggan
   border-radius: 15px;
   box-shadow: 10px 10px black;
   //background-color: yellow;
-  background-color: $grey-color-ultralight;
+  background-color: white;
+    // $grey-color-ultralight;
   //margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 20px;
+  height: 80px;
   //max-width: 100%;
   //padding: 30px;
   //border: 5px solid white;
@@ -25,7 +28,7 @@
   //background-color: $grey-color-dark;
   //border-top: 5px solid $grey-color-dark;
   //border-bottom: 5px solid black;
-  height: 100px;
+  //height: auto; tidigare 100
   //min-height: $spacing-unit * 1.865;'
   padding: $spacing-unit * 1.5;
 
@@ -33,9 +36,17 @@
   position: relative;
 }
 
+// Detta är "loggan"
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(3);
+  font-family: $headline-font-family;
+  text-decoration:none;
+  &:hover {
+    color: $brand-color-dark;
+    text-decoration:none;
+  }
+  //color: white;
+  //font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -43,11 +54,12 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    //color: $grey-color-dark;
   }
 }
 
 .site-nav {
+  font-family: Courier, sans-serif;
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -60,11 +72,13 @@
   }
 
   .h1 {
-    size: $base-font-size * 2;
-    color: black;
+    size: $base-font-size * 3;
+    color: $headline-color;
+    font-family: $headline-font-family;
   }
 
   .page-link {
+    //font-family: "Courier", monospace;
     color: $text-color;
     line-height: $base-line-height;
 
@@ -117,6 +131,7 @@
     }
 
     .page-link {
+      //font-family: $headline-font-family;
       display: block;
       padding: 5px 10px;
 
@@ -138,6 +153,7 @@
   //border-bottom: 5px solid $grey-color-dark;
   //background-color: $grey-color-light;
   padding: $spacing-unit;
+  margin: auto;
 }
 
 .footer-heading {
@@ -152,32 +168,33 @@
 }
 
 .footer-col-wrapper {
-  @include relative-font-size(0.9375);
-  color: $grey-color;
-  margin-left: 7px;
+  color: #383838;
+  font-weight: bolder;
+  @include relative-font-size(0.7);
+  //margin-left: 7px;
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
-  //margin-left: 15px;
+  margin-left: 30px;
   padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(55% - (#{$spacing-unit} / 2));
-  width:         calc(55% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-  width:         calc(25% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-  width: -webkit-calc(10% - (#{$spacing-unit} / 2));
-  width:         calc(10% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -202,16 +219,17 @@
 }
 
 
-
 /**
  * Page content
  */
 .page-content {
   padding: $spacing-unit 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 .page-heading {
-  @include relative-font-size(1.25);
+  @include relative-font-size(2);
 }
 
 .post-list {
@@ -238,6 +256,17 @@
   @include relative-font-size(1.5);
 }
 
+// DEN HÄR FUNKAR
+h1, h2, h3, h4 {
+  font-family: $headline-font-family;
+  color: $headline-color;
+}
+
+h3 {
+  //@include relative-font-size(8);
+  //size: 5px;
+  color: black;
+}
 
 
 /**
@@ -251,14 +280,32 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  //text-decoration: none;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
 }
 
+
+
 .post-content {
   margin-bottom: $spacing-unit;
+
+  .ingress {
+    font-family: $headline-font-family;
+    //color: green;
+  }
+
+  h1  {
+    font-family: $headline-font-family;
+    @include relative-font-size(3);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(2);
+    }
+    color: green;
+  }
 
   h2 {
     @include relative-font-size(2);
@@ -269,7 +316,7 @@
   }
 
   h3 {
-    @include relative-font-size(1.625);
+    @include relative-font-size(1.3);
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
@@ -286,10 +333,16 @@
 }
 
 .content-box {
-  border-radius: 15px;
+  @extend .site-header;
+  margin-top: 0;
+  background-color: white;
+  height: auto;
+  font-family: $base-font-family;
+  //border-radius: 15px;
   box-shadow: 10px 10px black;
   padding: 20px;
-  background-color: $grey-color-ultralight;
+  //background-color: #fdc66b;
+  //height: auto;
 }
 
 //.aboutbox {
@@ -330,45 +383,53 @@
 
 .aboutbox-col-wrapper {
   @extend .content-box;
-  background-color: white;
-    //yellow;
-  //@include relative-font-size(0.9375);
-  //color: $grey-color;
-  //margin-left: 7px;
-  @extend %clearfix;
+
+  background-color: black;
+  box-shadow: 10px 10px $grey-color;
+  padding: 0;
   font-style: italic;
-  color: $headline-color;
+  color: white;
+  a {
+    color: $grey-color;
+    &:hover {
+      color: $brand-color;
+    }
+    &:active {
+      color: $brand-color-dark;
+    }
+  }
+  @extend %clearfix;
 }
 
-.aboutbox-col {
-  float: left;
-  //margin-bottom: $spacing-unit / 2;
-  //margin-left: 15px;
-  padding-left: $spacing-unit / 2;
-  font-family: $second-base-font-family;
-  //color: $text-color2; PÅVERKAR INGET!
-}
+//.aboutbox-col {
+//  float: left;
+//  //margin-bottom: $spacing-unit / 2;
+//  //margin-left: 15px;
+//  padding-left: $spacing-unit / 2;
+//  //color: $text-color2; PÅVERKAR INGET!
+//}
 
 .aboutbox-col-1 {
     // detta styr alltså bildens storlek:
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(28% - (#{$spacing-unit} / 2));
+    width:         calc(28% - (#{$spacing-unit} / 2));
   float: left;
+  //padding-top: 0px;
   //margin-bottom: $spacing-unit / 2;
   //margin-left: 15px;
   //padding-left: $spacing-unit / 2;
 }
 
 .aboutbox-col-2 {
-  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-  width:         calc(50% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(65% - (#{$spacing-unit} / 2));
+  width:         calc(65% - (#{$spacing-unit} / 2));
   float: left;
   //margin-bottom: $spacing-unit / 2;
+  margin-top: 5px;
   margin-left: 15px;
   //padding-left: $spacing-unit / 2;
-  .h1 {
-    size:100px;
-    color:green;
+  .about-text {
+    @include relative-font-size(0.8);
   }
 }
 

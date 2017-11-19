@@ -1,31 +1,26 @@
 <header class="wrapper" role="banner">
 
-  <!--HEJHEJHEJ: hamnar HÖGST UPP AV ALLT på sajten, dock under grått streck-->
-
   <div class="site-header">
-    <!--<div class="headerbox">-->
+
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
-
-    <!--<p>HEJ</p>-->
 
     <div class="trigger">
     {% for path in page_paths %}
     {% assign my_page = site.pages | where: "path", path | first %}
     {% if my_page.title %}
     <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      HEJ HEJ HEJ
     {% endif %}
     {% endfor %}
     </div>
 
-
-
     <!--med detta bortkommenterat försvinner titeln:-->
-    <!--<a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>-->
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-    <a href="/">
-    <img src = "/img/logo.png" width="800" alt="Alfreds 1DV022-sida">
-    </a>
+    <!--<a href="/">-->
+    <!--<img src = "/img/logo.png" width="800" alt="Alfreds 1DV022-sajt">-->
+    <!--</a>-->
 
     {% if page_paths %}
       <nav class="site-nav">

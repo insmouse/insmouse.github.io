@@ -5,32 +5,31 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
       </time>
+      | <a href="{{ page.url }}">Permalänk</a>
+
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
     <p class="post-comment-counter">
     {% if page.comments %}
     <a href="{{ page.url }}#disqus_thread"></a>
-    detta är aktuella sidans URL: {{ page.url }}
+
     {% endif %}
     </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
 
-    (detta är ovanför post.html:s content)
-
-    <!--<h2>{{ page.test_text }}</h2>-->
-
 
     {{ content }}
-POSTPOSTPOST
 
   </div>
 

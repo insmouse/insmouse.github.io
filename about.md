@@ -5,17 +5,11 @@ permalink: /about/
 about: true
 ---
 
+### Vem är jag? Jo:
 
+Orakad mångsysslare som sedan 2012 är bosatt i Tokyo.
+Intressen: konst, resor, korta böcker och långa promenader.
+Är även oerhört förtjust i oerhört onyttig mat samt att missa deadlines.
+Om jag bara fick ta med mig en hobby till en öde ö så skulle det vara att missa deadlines.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[Tillbaka till startsidan](/)

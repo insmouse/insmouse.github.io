@@ -4,17 +4,18 @@
 //body { background: red; }
 
 //h1 {
-//  size: 300px;
-//  color: black;
+//  //size: 300px;
+//  color: #f27e61;
 //}
 
 
 // Define defaults for each variable.
 
-$base-font-family: Yanone Kaffeesatz;
-$tempfont: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: "Courier", monospace !default;
+$headline-font-family: Bevan;
+//$tempfont: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $second-base-font-family: Courier;
-$base-font-size:   15px !default;
+$base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
@@ -29,10 +30,12 @@ $spacing-unit:     20px !default;
 $headline-color: #f27e61 !default;
 $text-color:       black !default;
 //f84aa3
-$background-color: #fdc66b !default;
+$background-color: #f27e61 !default;
 //{ @include linearGradient(black, white); };
 $brand-color:      #76cbd9 !default;
+$brand-color-dark: #13383e !default;
 // #4fcdf5
+// #fdc66b
 
 $grey-color:       #828280 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
