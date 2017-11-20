@@ -1,11 +1,17 @@
 <header class="wrapper" role="banner">
 
-  <div class="site-header">
+  <div class="site-menu">
 
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 
     <div class="trigger">
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      Navigation:
+      &nbsp;
+      &nbsp;
       <a class="page-link" href="/">Startsida</a>
       &nbsp;
       ///
@@ -20,6 +26,10 @@
       &nbsp;
       <a class="page-link" href="mailto:ah223ws@student.lnu.se">Kontakt</a>
 
+    </div>
+
+      <div class="site-header">
+
       <!--{% for path in page_paths %}-->
     <!--{% assign my_page = site.pages | where: "path", path | first %}-->
     <!--{% if my_page.title %}-->
@@ -30,10 +40,19 @@
       <!--{% endif %}-->
     <!--{% endfor %}-->
       <!--<a class="page-link" href="mailto:ah223ws@student.lnu.se">Kontakt</a>-->
-    </div>
+
 
     <!--med detta bortkommenterat försvinner titeln:-->
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+      </div>
+
+
+  </div>
+
+    <!--<div class="site-title">-->
+       <!--{{ site.title | escape }}-->
+    <!--</div>-->
 
     <!--<a href="/">-->
     <!--<img src = "/img/logo.png" width="800" alt="Alfreds 1DV022-sajt">-->
