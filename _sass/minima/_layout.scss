@@ -16,54 +16,37 @@
   padding-left: 20px;
   // Positioning context for the mobile navigation icon
   position: relative;
-  //a:link {
-  //  color: white;
-  //  background-color: $brand-color-dark;
-  //  border-radius: 5px;
-  //  border: 50px;
-  //  //box-shadow: 5px 5px black;
-  //  text-decoration: none;
-  //}
-  //
-  //a:visited {
-  //  color: white;
-  //  background-color: $brand-color-dark;
-  //  border-radius: 5px;
-  //}
-  //
-  //a:hover {
-  //  color: white;
-  //  background-color: $brand-color-dark;
-  //}
-  //
-  //a:active {
-  //  color:white;
-  //  background-color: $brand-color;
-  //}
 
 }
 
 
 .site-menu {
-  //@extend .site-header;
+  p{
+    padding-left: 20px;
+  }
   font-family: $headline-font-family; // Detta styr typsnittet i menyn, ej loggan
   color: $grey-color-light;
+  .page-link {
+    color: $brand-color-dark;
+    //&hover { color: white; }
+    font-family: $headline-font-family; // Detta styr typsnittet i menyn, ej loggan
+    .a:hover { color: white; }
+  }
   //height: 90;
   border-radius: 15px;
   box-shadow: 10px 10px black;
   background-color: $brand-color;
   margin-top: 15px;
   padding-top: 10px;
-
-  //padding: 5px;
-  //padding-left: 20px;
-  margin-bottom:0px;
-  //padding: $spacing-unit * 1.5;
-  position: relative;
-  .page-link {
-    color: $brand-color-dark;
-  }
 }
+
+  .nav-trigger {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
 
 
 
@@ -82,98 +65,33 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
-  margin-top: 0px;
+  margin-top: 0;
   float: left;
 
 }
 
-.site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  background-color: $brand-color-dark;
-  .a:hover {
-    color: white;
-  }
 
-  .nav-trigger {
-    display: none;
-  }
 
-  .menu-icon {
-    display: none;
-  }
 
-  .page-link {
-    .a:hover {
-      color: white;
-    }
-    color: $text-color;
-    line-height: $base-line-height;
-    background-color: $brand-color-dark;
 
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+@include media-query($on-palm) {
+  .site-title {
+    @include relative-font-size(2);
   }
+  //.site-menu {
+  //  @include relative-font-size(0.5);
+  //  background: green;
+  //  color: green;
+  //  display:inline-block;
+  //  .page-link {
+      //@include relative-font-size(0.5)
+    //}
+  //}
 }
 
 
 
 
-
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
-
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg path {
-        fill: $grey-color-dark;
-      }
-    }
-
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-      margin-left: 20px;
-    }
-  }
 
 
 
@@ -183,11 +101,7 @@
  */
 .site-footer {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  //border-top: 5px solid $grey-color-dark;
-  //border-bottom: 5px solid $grey-color-dark;
-  //background-color: $grey-color-light;
-  padding: $spacing-unit;
-  //margin: auto;
+  margin-top: 10px;
 }
 
 .footer-heading {
@@ -205,30 +119,42 @@
   color: #383838;
   font-weight: bolder;
   @include relative-font-size(0.7);
-  //margin-left: 7px;
+  //margin-left: 3px; // styr också hela raden
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
-  margin-left: 30px;
+  margin-left: 30px; // tidigare 30px; detta styr hela radens placering, inte inre marginaler
   padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width:         calc(45% - (#{$spacing-unit} / 2));
+  //box-shadow: 10px 10px $grey-color-dark;
+  border-radius: 15px;
+  // tidigare 45%
+  margin-left:10px;
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+  //box-shadow: 10px 10px black;
+  border-radius: 15px;
+  margin-left:10px;
+  padding-left:10px;
 }
 
 .footer-col-3 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+  //box-shadow: 10px 10px black;
+  border-radius: 15px;
+  margin-left:10px;
+  padding-left:10px;
 }
 
 @include media-query($on-laptop) {
@@ -290,15 +216,23 @@
 }
 
 
-h1, h2, h3, h4 {
+h1, h3, h4 {
   font-family: $headline-font-family;
   color: $headline-color;
 }
 
+h2 {
+  font-family: $headline-font-family;
+  color: white;
+  @include relative-font-size(2);
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.75);
+  }
+}
+
 // Detta är inläggens "ingresser" (typ examinationsfrågorna)
 h3 {
-  //@include relative-font-size(8);
-  //size: 5px;
   color: black;
 }
 
@@ -336,11 +270,11 @@ h3 {
   }
 
   h2 {
-    @include relative-font-size(2);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
+    //@include relative-font-size(3);
+    //
+    //@include media-query($on-laptop) {
+    //  @include relative-font-size(2);
+    //}
   }
 
   h3 {
@@ -376,7 +310,9 @@ h3 {
 
 
 .aboutbox-col-wrapper {
-  @extend .content-box;
+  //@extend .content-box;
+
+  height: auto;
 
   a:link {
     background-color: white;
@@ -395,12 +331,12 @@ h3 {
     background-color: white;
   }
 
-  border-radius: 15px;
-  background-color: $brand-color-dark;
-  box-shadow: 10px 10px black;
+  //border-radius: 15px;
+  //background-color: $brand-color-dark;
+  //box-shadow: 10px 10px white;
   padding: 0;
   //font-style: italic;
-  color: $brand-color;
+  color: white;
 
   @extend %clearfix;
  }
@@ -411,15 +347,30 @@ h3 {
     width: -webkit-calc(28% - (#{$spacing-unit} / 2));
     width:         calc(28% - (#{$spacing-unit} / 2));
   float: left;
+  box-shadow: 10px 10px black;
+  //height: 203px;
+  //height: auto;
+  border-radius: 15px 0px 0px 15px;
 }
 
 .aboutbox-col-2 {
-  width: -webkit-calc(65% - (#{$spacing-unit} / 2));
-  width:         calc(65% - (#{$spacing-unit} / 2));
+
+  color: white; // funkar
+
+  //height: 193px;
+  //height: auto;
+  box-shadow: 10px 10px black;
+  border-radius: 0px 15px 15px 0px;
+  width: -webkit-calc(70% - (#{$spacing-unit} / 2));
+  width:         calc(70% - (#{$spacing-unit} / 2));
   float: left;
   //margin-bottom: $spacing-unit / 2;
-  margin-top: 13px;
-  margin-left: 20px;
+  //margin-top: 13px;
+  margin-left: 15px; // avstånd till bildkolumnen
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  background-color: $brand-color-dark;
   //padding-left: $spacing-unit / 2;
   .about-text {
     @include relative-font-size(0.8);
@@ -428,4 +379,41 @@ h3 {
     color: $headline-color;
   }
 }
+
+@include media-query($on-laptop) {
+  .aboutbox-col-1 {
+    width: -webkit-calc(28% - (#{$spacing-unit} / 2));
+    width:         calc(28% - (#{$spacing-unit} / 2));
+  }
+
+  .aboutbox-col-2 {
+    //margin-top: $spacing-unit;
+    //margin-left: 0;
+    width: -webkit-calc(65% - (#{$spacing-unit} / 2));
+    width:         calc(65% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
